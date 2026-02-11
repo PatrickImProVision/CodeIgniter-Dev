@@ -1,2 +1,4 @@
 # CodeIgniter-Dev
-Developing Rquired Application Stiched To Client Size Through CodeIgniter Latest Vesrion.
+
+Developing Required Application Stiched To Client Size Through CodeIgniter Latest Vesrion.
+

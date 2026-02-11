@@ -1,0 +1,45 @@
+# CodeIgniter Environment Variables
+.Env
+.Env.local
+.Env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Application
+WritAble/Cache/*
+!WritAble/Cache/.gitkeep
+WritAble/Logs/*
+!WritAble/Logs/.gitkeep
+WritAble/Session/*
+!WritAble/Session/.gitkeep
+WritAble/UpLoads/*
+!WritAble/UpLoads/.gitkeep
+
+# Testing
+coverage/
+phpunit.xml
+Tests/fixtures/BaseDatabase.php
+
+# Composer
+Vendor/
+composer.lock
+
+# Node (if using npm)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build artifacts
+dist/
+build/
+
+
+
+
+

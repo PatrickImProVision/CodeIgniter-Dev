@@ -1,0 +1,99 @@
+============================================================
+ CODEIGNITER 4 - DashBoard STANDARD LAYOUT (TXT VERSION)
+============================================================
+
+_AppRoot_/
+│
+├── App
+│   ├── Controllers
+│   │   └── DashBoard
+│   │       ├── BaseDashBoardController.php
+│   │       ├── User.php
+│   │       ├── Content.php
+│   │       └── WebApp.php
+│   │
+│   ├── Models
+│   │   └── DashBoard
+│   │       ├── UserModel.php
+│   │       ├── ContentModel.php
+│   │       └── WebAppModel.php
+│   │
+│   ├── Views
+│   │   └── DashBoard
+│   │       ├── Index.php
+│   │       │
+│   │       ├── Users
+│   │       │   └── Index.php
+│   │       │
+│   │       ├── User
+│   │       │   ├── Index.php
+│   │       │   ├── Invite.php
+│   │       │   └── Edit.php
+│   │       │
+│   │       ├── Content
+│   │       │   ├── Index.php
+│   │       │   └── Create.php
+│   │       │
+│   │       └── WebApp
+│   │           ├── Index.php
+│   │           └── Settings.php
+│   │
+│   └── ConFig
+│       └── Routes.php
+│
+├── Public
+│   ├── css
+│   ├── js
+│   └── assets
+│
+└── WritAble
+    └── logs
+
+
+============================================================
+ ROUTES (App/ConFig/Routes.php)
+============================================================
+
+$routes->group('DashBoard', ['filter' => 'auth'], function($routes) {
+    $routes->get('User', 'DashBoard\User::Index');
+    $routes->get('Content', 'DashBoard\Content::Index');
+    $routes->get('WebApp', 'DashBoard\WebApp::Index');
+});
+
+
+============================================================
+ BASE DashBoard CONTROLLER
+============================================================
+
+App/Controllers/DashBoard/BaseDashBoardController.php
+
+- Loads shared layout data
+- Ensures authentication
+- Provides helper loading
+- Used by all DashBoard controllers
+
+
+============================================================
+ NOTES
+============================================================
+
+• This layout follows a clean MVC separation.
+• Each DashBoard domain (User, Content, WebApp) has:
+    - Controller
+    - Model
+    - View folder
+• _Layout.php is the shared DashBoard template.
+• This structure is scalable and HMVC-ready.
+• You can convert this into a module later if needed.
+
+============================================================
+ END OF FILE
+============================================================
+
+
+
+
+
+
+
+

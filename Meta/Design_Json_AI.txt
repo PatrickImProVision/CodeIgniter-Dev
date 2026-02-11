@@ -1,0 +1,10 @@
+I Would Like To Design DataBase In Json For E-Book Store.
+I Want To Include The Case Look Of The Book, Some Inspirational Pages, Index, PreFace, Topics, Chapters, Pages.
+
+Json Example:
+
+{
+	"FrameWork": {}
+}
+
+What Would Be The Best Practice?

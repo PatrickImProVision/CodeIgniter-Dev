@@ -1,0 +1,105 @@
+============================================================
+STANDARD WEB APPLICATION STRUCTURE + CODEIGNITER 4 LAYOUT
+============================================================
+
+_AppRoot_/
+│
+├── Public/                      <-- Web-accessible root
+│   ├── Index.php                <-- Front controller
+│   ├── assets/                  <-- CSS, JS, images
+│   └── uploads/                 <-- Public uploads
+│
+├── App/                         <-- Main application (MVC)
+│   ├── ConFig/                  <-- Routing, filters, app settings
+│   ├── Controllers/             <-- Request handlers
+│   │   ├── User/                <-- User module controllers
+│   │   ├── Store/               <-- Store module controllers
+│   │   └── DashBoard/           <-- DashBoard controllers
+│   │
+│   ├── Models/                  <-- Data access + business logic
+│   │   ├── User/                <-- User models
+│   │   ├── Store/               <-- Store models
+│   │   └── DashBoard/           <-- DashBoard models
+│   │
+│   ├── Views/                   <-- Templates
+│   │   ├── Index.php            <-- Main Index page view
+│   │   ├── User/                <-- User views
+│   │   ├── Store/               <-- Store views
+│   │   └── DashBoard/           <-- DashBoard views
+│   │
+│   ├── DataBase/
+│   │   ├── Migrations/          <-- Schema versioning
+│   │   └── Seeds/               <-- Initial/test data
+│   │
+│   ├── Filters/                 <-- Middleware-like filters
+│   ├── Helpers/                 <-- Procedural helper functions
+│   ├── Libraries/               <-- Custom OOP libraries
+│   ├── Language/                <-- Localization files
+│   └── ThirdParty/              <-- Non-Composer external libs
+│
+├── WritAble/                    <-- Runtime storage
+│   ├── cache/
+│   ├── logs/
+│   ├── session/
+│   ├── uploads/
+│   └── debugbar/
+│
+├── Tests/                       <-- PHPUnit Tests
+│
+├── Vendor/                      <-- Composer dependencies
+│
+├── env                          <-- Template environment file
+└── .Env                         <-- Active environment ConFig
+
+
+============================================================
+MAPPING YOUR CONCEPTUAL MODULES TO CODEIGNITER 4
+============================================================
+
+Your Concept:          CodeIgniter 4 Standard:
+------------------------------------------------------------
+Index.app              Public/Index.php + App/ConFig/Routes.php
+                       App/Views/Index.php
+User/*                 App/Controllers/User/
+                       App/Models/User/
+                       App/Views/User/
+
+Store/*                App/Controllers/Store/
+                       App/Models/Store/
+                       App/Views/Store/
+
+DashBoard/*            App/Controllers/DashBoard/
+                       App/Views/DashBoard/
+
+Assets/*               Public/Assets/
+ConFig/*               App/ConFig/
+Vendor/*               Vendor/
+
+
+============================================================
+NOTES
+============================================================
+- "App/" is your main MVC workspace.
+- "Public/" is the only directory exposed to the browser.
+- "WritAble/" must be WritAble by the server.
+- Modules (User, Store, DashBoard) can be grouped by domain
+  inside Controllers, Models, and Views for clean separation.
+- This layout is fully compatible with CodeIgniter 4 standards.
+
+
+============================================================
+END OF FILE
+============================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
